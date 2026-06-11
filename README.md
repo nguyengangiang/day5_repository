@@ -34,6 +34,28 @@ the full Claude Code workflow you learned in Days 1–4.
 SQLite schemas are in [`schema/`](schema/), wireframe sketches for B and C in
 [`wireframes/`](wireframes/).
 
+## Running this project (Option B — Work Order Screen)
+
+This fork implements **Option B**: a Node/Express + SQLite API with a React
+(Vite) screen. SQLite uses Node's built-in `node:sqlite` (no native build step;
+requires Node 22+ — Node 24 recommended).
+
+```bash
+# 1. API (port 3000) — also serves the built client if present
+cd server && npm install && npm test   # 34 Jest tests
+npm start
+
+# 2. Front-end, dev mode (port 5173, proxies /work-orders -> :3000)
+cd client && npm install && npm run dev
+
+# …or build the client and let the API serve it at http://localhost:3000
+cd client && npm run build && cd ../server && npm start
+```
+
+API: `GET /work-orders?status=`, `POST /work-orders`, `PATCH /work-orders/:id/status`.
+See [`docs/option-b-work-order-screen.md`](docs/option-b-work-order-screen.md)
+for the spec and [`CLAUDE.md`](CLAUDE.md) for validation/transition rules.
+
 ## Mandatory workflow (non-negotiable)
 
 1. **Plan Mode first** — not a single line of code before seeing a plan.
