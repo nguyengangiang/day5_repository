@@ -1,6 +1,8 @@
 # CLAUDE.md — Option B: Work Order Screen
 
-MES work-order service. Node/Express API + React (Vite) UI + SQLite (better-sqlite3).
+MES work-order service. Node/Express API + React (Vite) UI + SQLite via Node's
+built-in `node:sqlite` (`DatabaseSync` — chosen over better-sqlite3 because this
+machine lacks the VS build tools native modules need).
 Tests with Jest + supertest. See `PLAN.md` for the full plan and
 `docs/option-b-work-order-screen.md` for the spec.
 
