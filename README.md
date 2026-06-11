@@ -81,12 +81,3 @@ for the spec and [`CLAUDE.md`](CLAUDE.md) for validation/transition rules.
 7. Record 5-minute demo
 8. Write retrospective
 ```
-
-## Deliverables (submit to #yic-mes-training)
-
-- **GitHub fork link** — must include `PLAN.md`, `CLAUDE.md`,
-  `.claude/commands/review.md`, `.claude/agents/test-writer.md`
-- **5-minute screen recording demo** — working endpoints/UI in a browser or
-  terminal
-- **Final retrospective (~1 page)** — top 3 lessons, top 3 mistakes (and
-  recovery), biggest unresolved question about Claude Code
